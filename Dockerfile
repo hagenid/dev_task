@@ -2,7 +2,7 @@
 
 # by from hagen_id
 
-# Dovnload base images
+# Download base images
 
 FROM ubuntu
 
