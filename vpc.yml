@@ -1,0 +1,49 @@
+# versin v1
+AWSTemplateFormatVersion: 2010-09-09
+Description: "Network: VPC, Subnets + RouteTables, Internet + NAT Gateways"
+
+Metadata:
+ AWS::CloudFormation::Interface: 
+    ParameterGroups: 
+      - 
+        Label: 
+          default: "Network Configuration"
+        Parameters: 
+          - Environment
+          - VPCBlock
+      -
+        Label:
+          default: "Subnets CIDR Blocks"
+        Parameters:
+          - dev_subnet_a
+          - dev_subnet_b
+          - dev_subnet_c_private
+          - dev_subnet_d_private
+Parameters:
+  Environment:
+    Type: String
+    Default: "dev_prod"
+
+  VPCBlock:
+    Type: String
+    Default: '10.0.0.0/16'
+
+  dev_subnet_a: 
+    Type: String
+    Default: '10.0.10.0/24'
+    Description: "dev_subnet_a"
+
+  dev_subnet_b: 
+    Type: String
+    Default: '10.0.20.0/24'
+    Description: "dev_subnet_b"
+  
+  dev_subnet_c_private: 
+    Type: String
+    Default: '10.0.30.0/24'
+    Description: "Private Subnet-A CIDR"
+    
+  dev_subnet_d_private: 
+    Type: String
+    Default: '10.0.40.0/24'
+    Description: "Public Subnet-B CIDR"
