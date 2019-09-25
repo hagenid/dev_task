@@ -47,6 +47,7 @@ RUN npm install -g @angular/cli
 RUN ng --version
 RUN ls -a
 WORKDIR  ngx-api-utils 
-RUN npm install ngx-api-utils 
-CMD ng serve --host 0.0.0.0 --port 92
+RUN npm install ngx-api-utils
 
+#CMD ng serve --host 0.0.0.0 --port 92
+ENTRYPOINT ["ng serve --host 0.0.0.0 --port 92"]
