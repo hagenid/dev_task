@@ -39,15 +39,15 @@ RUN apt-get update && apt-get install -qqy --no-install-recommends \
 
 
 #RUN apt-get install nodejs
-RUN nodejs -v
+#RUN nodejs -v
 
-RUN pwd
+#RUN pwd
 RUN git clone https://github.com/ngx-api-utils/ngx-api-utils.git
 RUN npm install -g @angular/cli 		 
-RUN ng --version
-RUN ls -a
+#RUN ng --version
+#RUN ls -a
 WORKDIR  ngx-api-utils 
 RUN npm install ngx-api-utils
 
-#CMD ng serve --host 0.0.0.0 --port 92
-ENTRYPOINT ["ng serve --host 0.0.0.0 --port 92"]
+CMD ng serve --host 0.0.0.0 --port 92
+#ENTRYPOINT ["ng serve --host 0.0.0.0 --port 92"]
