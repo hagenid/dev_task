@@ -1,0 +1,16 @@
+resources:
+
+    - name: source-code
+      type: git
+      source:
+        uri: git@github.com:hagenid/devops_test.git
+        branch: master
+        private_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDLgC3XFkbjh2CtyVBDu7uFGkTUS25QcL2KrucVI1HsmpqcSBmJ5X7LeiGKatYN44AXpzTX88d1v8MhyBiltdhZ4ZyoI6lV7VKBWRRvmVw+yrf2hRPqI/Z/uwfH4ZPeKSzm1jlpn+r9entUrJUCNgS7StE8+MQbKpjUQ9lf+0gJg6Uny8okytfix4NLnYQctKPoTecWPE2pnCLVLHfjbqSa1p1GgoAXVexOGr4VFHTQUUhvmrcaJ/vBLSWNh77x8kcE+WhH+Wj086oCFyRw8w0VQ5t7oa2C6kLT/9/N5aA898xu0x4SOezxSw/9uYp8deUc2tP8z8DhGNl7LwCvm8KpjYbU5py7I34+0LuW9yhNt4KEb/yS5KZ1hnNex+7jYlHsfwKXFrXU186Hr7XHIWCPD1f8TFdZWvvpnBhP1fPbToaatRptsInQ8Wh7RHSHjZyZSZ18FS+AfIvrZ5SHWXHrOhDprIA2QQhgtHIOv3SHxGH//xhWTt7MpT2TXGnMSDbilVVCMbPNsRui3N6QjAPEUYibBgqYrmsDT6BNqGwVkvoST2zqPfwnu8SPRwJpj4aBkfPqDCu2uL5shTMhn4sR1hT29Ocg8qRd7kUva+z0qRhueOiZsYmwEeLK6iA/YRApnXneh1nCUevV3aWCb3NnCpGz0I4kHis/SXOycL2Oyw== hagen_id@ukr.net 
+
+    - name: aws-s3-release
+      type: s3
+      source:
+        bucket: releases
+        regexp: directory_on_s3/release-(.*).tgz
+        access_key_id: 
+        secret_access_key: 
