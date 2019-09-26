@@ -1,4 +1,4 @@
-version: '3'
+version: '4'
 
 services:
   concourse-db:
@@ -22,7 +22,7 @@ services:
       CONCOURSE_POSTGRES_USER: concourse_user
       CONCOURSE_POSTGRES_PASSWORD: concourse_pass
       CONCOURSE_POSTGRES_DATABASE: concourse
-      CONCOURSE_EXTERNAL_URL: http://192.168.1.172:8080
-      CONCOURSE_ADD_LOCAL_USER: test:test
-      CONCOURSE_MAIN_TEAM_LOCAL_USER: test
+      CONCOURSE_EXTERNAL_URL: http://192.168.1.162:8080
+      CONCOURSE_ADD_LOCAL_USER: hagen:Q1w2e3r4t5
+      CONCOURSE_MAIN_TEAM_LOCAL_USER: hagen
       CONCOURSE_WORKER_BAGGAGECLAIM_DRIVER: overlay
