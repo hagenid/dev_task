@@ -7,7 +7,7 @@ Task from dev
 
 
 - create a Github repository for the DevOps parts 
-- Done, ssh key create and managment
+- Done, ssh key create and managment, generate and add GPG key for Github
 - organize each and everything accordingly in the git repository
 - Done\ in process
 - in the AWS create Cloudformation template defining a VPC for the whole stuff
